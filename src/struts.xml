@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="liu" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="msg">/common/msg.jsp</result>
+        </global-results>
+        
+        <action name="upload" class="com.util.upload" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+        </action>
+        
+        
+        
+        
+        <action name="orgMana" class="orgAction" method="orgMana">
+            <result name="success">/admin/org/orgMana.jsp</result>
+        </action>
+        <action name="addOrg" class="orgAction" method="addOrg">
+        </action>
+        <action name="delOrg" class="orgAction" method="delOrg">
+            <result name="haveChildOrganization">/admin/org/haveChildOrganization.jsp</result>
+            <result name="havePersons">/admin/org/havePersons.jsp</result>
+        </action>
+        <action name="orgAll" class="orgAction" method="orgAll">
+            <result name="success">/admin/yuangong/orgAll.jsp</result>
+        </action>
+        
+        
+        
+        <action name="yuangongAdd" class="yuangongAction" method="yuangongAdd">
+        </action>
+        <action name="yuangongDel" class="yuangongAction" method="yuangongDel">
+        </action>
+        <action name="yuangongMana" class="yuangongAction" method="yuangongMana">
+            <result name="success">/admin/yuangong/yuangongMana.jsp</result>
+        </action>
+       
+        
+        
+        <action name="gongziAdd" class="gongziAction" method="gongziAdd">
+        </action>
+        <action name="gongziMana" class="gongziAction" method="gongziMana">
+            <result>/admin/gongzi/gongziMana.jsp</result>
+        </action>
+        <action name="gongziDel" class="gongziAction" method="gongziDel">
+        </action>
+        <action name="gongziPre" class="gongziAction" method="gongziPre">
+            <result name="success">/admin/gongzi/gongziPre.jsp</result>
+        </action>
+        <action name="gongziEdit" class="gongziAction" method="gongziEdit">
+        </action>
+        
+        <action name="gongziMine" class="gongziAction" method="gongziMine">
+            <result>/admin/gongzi/gongziMine.jsp</result>
+        </action>
+        
+        
+        
+        
+        
+        
+        <action name="jiangchengAdd" class="jiangchengAction" method="jiangchengAdd">
+        </action>
+        <action name="jiangchengMana" class="jiangchengAction" method="jiangchengMana">
+            <result>/admin/jiangcheng/jiangchengMana.jsp</result>
+        </action>
+        <action name="jiangchengDel" class="jiangchengAction" method="jiangchengDel">
+        </action>
+        <action name="jiangchengMine" class="jiangchengAction" method="jiangchengMine">
+            <result>/admin/jiangcheng/jiangchengMine.jsp</result>
+        </action>
+        
+        
+        
+        
+       
+        
+        
+        
+        <action name="qingjiaAdd" class="qingjiaAction" method="qingjiaAdd">
+        </action>
+        <action name="qingjiaMine" class="qingjiaAction" method="qingjiaMine">
+            <result>/admin/qingjia/qingjiaMine.jsp</result>
+        </action>
+        <action name="qingjiaDel" class="qingjiaAction" method="qingjiaDel">
+        </action>
+        <action name="qingjiaMana" class="qingjiaAction" method="qingjiaMana">
+            <result>/admin/qingjia/qingjiaMana.jsp</result>
+        </action>
+        <action name="qingjiaShenhe" class="qingjiaAction" method="qingjiaShenhe">
+            <result>/admin/qingjia/qingjiaShenhe.jsp</result>
+        </action>
+    </package>
+</struts>
